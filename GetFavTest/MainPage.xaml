@@ -9,7 +9,7 @@
     mc:Ignorable="d"
     >
     <Page.Resources>
-        <Style TargetType="CheckBox">
+        <Style x:Key="myStyle" TargetType="CheckBox">
             <Setter Property="Background" Value="{ThemeResource CheckBoxBackgroundUnchecked}" />
             <Setter Property="Foreground" Value="{ThemeResource CheckBoxForegroundUnchecked}" />
             <Setter Property="BorderBrush" Value="{ThemeResource CheckBoxBorderBrushUnchecked}" />
@@ -452,13 +452,22 @@
             Source="https://stackoverflow.com"
             Visibility="Collapsed"
             />
-        <Grid>
+        <StackPanel>
             <TextBlock
                 IsColorFontEnabled="False"
                 Style="{StaticResource HeaderTextBlockStyle}"
                 Text="&#x1F6B2;"
                 />
-            <CheckBox HorizontalAlignment="Center" Content="Hellodddddddd" />
-        </Grid>
+            <CheckBox
+                HorizontalAlignment="Center"
+                Content="Hellodddddddd"
+                Visibility="Collapsed"
+                />
+
+            <local:CustomCheckBox 
+                Content="Test"
+                FontSize="100"
+                />
+        </StackPanel>
     </Grid>
 </Page>
