@@ -30,7 +30,7 @@ namespace GetFavTest
 
         private void MyWebView_ScriptNotify(object sender, NotifyEventArgs e)
         {
-
+           
         }
 
 
